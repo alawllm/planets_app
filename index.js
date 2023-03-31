@@ -13,17 +13,17 @@ app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
 
 
-const planets = ['pluto', 'saturn', 'earth', 'mars', 'jupiter']
-
-
 app.get('/', (req, res) => {
-    res.render('home', { planets })
+
+    res.render('home')
 })
 
-
-
 app.get('/planets', (req, res) => {
-    res.render('planets')
+    const { planetName } = req.query
+    if (!planetName) {
+        res.render('notfound')
+    }
+    res.render('planets', { planetName })
 })
 
 app.listen(8080, () => {
