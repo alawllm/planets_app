@@ -20,9 +20,7 @@ app.get('/', (req, res) => {
     res.render('home', { planets })
 })
 
-app.post('/', (req, res) => {
-    res.send('post request!!!')
-})
+
 
 app.get('/planets', (req, res) => {
     res.render('planets')
