@@ -3,6 +3,7 @@ const app = express();
 const path = require('path')
 const dotenv = require('dotenv').config()
 const axios = require('axios');
+const { key } = require('./env')
 
 //parsing data in order to populate the body
 app.use(express.urlencoded({ extended: true }))
@@ -13,34 +14,29 @@ app.set('views', path.join(__dirname, '/views'))
 //enabling ejs
 app.set('view engine', 'ejs')
 
-//axios
-
-
-
 // routing 
 app.get('/', (req, res) => {
 
     res.render('home')
 })
 
-app.get('/planets', (req, res) => {
+app.get('/planets', async (req, res) => {
     const { planetName } = req.query
-    const { keyVariable } = //
     const options = {
         method: 'GET',
         url: 'https://planets-by-api-ninjas.p.rapidapi.com/v1/planets',
         params: { name: planetName },
         headers: {
-            'X-RapidAPI-Key': keyVariable,
+            'X-RapidAPI-Key': key,
             'X-RapidAPI-Host': 'planets-by-api-ninjas.p.rapidapi.com'
         }
     }
-    axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error('NOTHING FOUND');
-    });
-    res.render('planets', { planetName })
+
+    let src = await axios.request(options).then(function (response) {
+        return response.data[0]
+    })
+
+    res.render('planets', { planetName, src })
 })
 
 app.listen(8080, () => {
