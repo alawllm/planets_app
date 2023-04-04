@@ -6,17 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Planets</title>
 </head>
 
 <body>
-    <h1>Look for the planets that interest you!</h1>
-    <form action="/planets" method="get">
-        <input type="text" id="inp" name="planetName">
-        <button>Click</button>
-    </form>
+    <nav>planet searching app</nav>
+    <div class="app">
+        <h1>Let's find the planet
+            <br> you're looking for!
+        </h1>
+        <form action="/planets" method="get">
+            <input type="text" id="inp" name="planetName" placeholder="planet name">
+            <button class="mainButton">Click</button>
+        </form>
+    </div>
 
-
+    <footer>this is a footer</footer>
 </body>
 
 </html>

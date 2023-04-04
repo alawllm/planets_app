@@ -3,7 +3,7 @@ const app = express();
 const path = require('path')
 const dotenv = require('dotenv').config()
 const axios = require('axios');
-const { key } = require('./env')
+const key = require('./.env')
 
 //parsing data in order to populate the body
 app.use(express.urlencoded({ extended: true }))
@@ -35,6 +35,9 @@ app.get('/planets', async (req, res) => {
     let src = await axios.request(options).then(function (response) {
         return response.data[0]
     })
+    if (!planetName) {
+        res.render('notfound')
+    }
 
     res.render('planets', { planetName, src })
 })
