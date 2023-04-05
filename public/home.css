@@ -1,29 +1,60 @@
 body {
-    background: rgb(224, 224, 233);
-    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    background: rgb(228, 234, 244);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
     overflow: hidden;
 }
 
+
 .app {
     /* content within the div  */
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all .2s ease-in-out;
     text-align: center;
     /* measurements of the div  */
-    padding: 6em;
-    width: 300px;
-    height: 300px;
+    padding: 3em;
+    min-width: 350px;
+    min-height: 350px;
     border-radius: 50%;
     /* colors  */
-    background: rgb(43, 50, 87);
+    background: rgb(31, 58, 122);
     color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+    font-size: 1.5em;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+nav {
+    margin-top: 0;
+    width: 100%;
+    display: inline;
+    background: rgb(90, 131, 189);
+    height: 4vh;
+    font-family: 'futura', 'arial';
+    color: white;
+    font-size: 1em;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    display: inline;
+    text-align: center;
+    background: rgb(170, 189, 205);
+    height: 4vh;
+
+    font-family: 'futura', 'arial';
+    font-size: 0.8em;
+    color: white;
 }
 
 .app:hover {
