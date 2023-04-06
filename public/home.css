@@ -20,28 +20,29 @@ body {
     justify-content: center;
     text-align: center;
     /* measurements of the div  */
-    padding: 3em;
-    min-width: 350px;
-    min-height: 350px;
     border-radius: 50%;
+    min-height: 300px;
+    min-height: 300px;
+    padding: clamp(2rem, 4rem, 8rem);
     /* colors  */
     background: rgb(31, 58, 122);
     color: rgb(255, 255, 255);
     transition: all .2s ease-in-out;
-    font-size: 1.5em;
-    font-family: 'Bebas Neue', cursive;
-
+    font-size: clamp(1rem, 1em + 1vw, 5rem);
+    font-family: 'Bebas Neue';
 }
 
 nav {
     margin-top: 0;
     width: 100%;
-    display: inline;
     background: rgb(90, 131, 189);
-    height: 4vh;
-    font-family: 'futura', 'arial';
+    font-family: 'futura';
     color: white;
+}
+
+.navText {
     font-size: 1em;
+    margin-left: 2%;
 }
 
 footer {
@@ -50,11 +51,14 @@ footer {
     display: inline;
     text-align: center;
     background: rgb(170, 189, 205);
-    height: 4vh;
-
-    font-family: 'futura', 'arial';
+    font-family: 'futura';
     font-size: 0.8em;
     color: white;
+}
+
+.footerText {
+    font-size: 1em;
+    margin-bottom: auto;
 }
 
 .app:hover {

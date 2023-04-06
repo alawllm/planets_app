@@ -1,17 +1,26 @@
 body {
-    background: rgb(43, 50, 87);
-    color: white;
-    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    background: rgb(228, 234, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .app {
     /* content within the div  */
+    background: rgb(45, 45, 86);
+    padding: 3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+.links {
+    color: black;
 }
