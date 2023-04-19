@@ -1,23 +1,52 @@
-<% layout('../layouts/boilerplate') %>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="app">
-        <h1>
-            <%= planetName %>
-        </h1>
-        <h2>is your planet!</h2>
-        <div>
-            <h3>
-                mass : <%= src.mass %>
-            </h3>
-            <h3>
-                radius : <%= src.radius %>
-            </h3>
-            <h3>
-                temperature : <%= src.temperature %>
-            </h3>
-            <h3>
-                min. distance (light year) : <%= src.distance_light_year %>
-            </h3>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/planets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Planets</title>
+</head>
+
+<body>
+    <nav>
+        <p class="navText">planet searching app</p>
+    </nav>
+    <main>
+        <div class="app">
+            <h1>
+                <%= planetName %>
+            </h1>
+            <h2>is your planet!</h2>
+            <div>
+                <h3>
+                    mass : <%= src.mass %>
+                </h3>
+                <h3>
+                    radius : <%= src.radius %>
+                </h3>
+                <h3>
+                    temperature : <%= src.temperature %>
+                </h3>
+                <h3>
+                    min. distance (light year) : <%= src.distance_light_year %>
+                </h3>
+            </div>
         </div>
-    </div>
-    <a class="links" href="/">Back to the main page</a>
+        <a class="links" href="/">Back to the main page</a>
+
+    </main>
+    <footer>
+        <p>
+        <p class="footbarText">built in 2023 by ala willam</p>
+        <a href="https://github.com/alawllm">GitHub</a>
+        </p>
+    </footer>
+</body>
+
+</html>

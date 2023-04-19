@@ -1,66 +1,23 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    background: rgb(239, 243, 249);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-
 .app {
-    /* content within the div  */
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     /* measurements of the div  */
-    border-radius: 50%;
+    border-radius: 10%;
     min-height: 300px;
     min-height: 300px;
     padding: clamp(2rem, 4rem, 8rem);
     /* colors  */
-    background: rgb(31, 58, 122);
+    background: rgb(39, 97, 110);
     color: rgb(255, 255, 255);
     transition: all .2s ease-in-out;
     font-size: clamp(1rem, 1em + 1vw, 5rem);
     font-family: 'Bebas Neue';
 }
 
-nav {
-    margin-top: 0;
-    width: 100%;
-    background: rgb(90, 131, 189);
-    font-family: 'futura';
-    color: white;
-}
-
-.navText {
-    font-size: 1em;
-    margin-left: 2%;
-}
-
-footer {
-    margin-top: auto;
-    width: 100%;
-    display: inline;
-    text-align: center;
-    background: rgb(170, 189, 205);
-    font-family: 'futura';
-    font-size: 0.8em;
-    color: white;
-}
-
-.footerText {
-    font-size: 1em;
-    margin-bottom: auto;
-}
-
 .app:hover {
     transform: scale(1.02);
+}
+
+.inputAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
