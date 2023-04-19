@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
+const ejsMate = require('ejs-mate')
 const path = require('path')
-const dotenv = require('dotenv').config()
 const axios = require('axios');
 const key = require('./.env')
 
@@ -11,15 +11,16 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '/public')))
 //views directory - for ejs files
 app.set('views', path.join(__dirname, '/views'))
-//enabling ejs
+//enabling ejs-mate: serving partials, include
+app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs')
-
 // routing 
 app.get('/', (req, res) => {
 
     res.render('home')
 })
 
+//main planet searching route
 app.get('/planets', async (req, res) => {
     const { planetName } = req.query
     const options = {
