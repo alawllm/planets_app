@@ -1,51 +1,66 @@
 body {
     box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
     margin: 0;
     background: rgb(239, 243, 249);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .app {
-    /* content within the div  */
-
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: auto;
 }
 
 nav {
+    display: inline-flex;
+    text-align: left;
     margin-top: 0;
     width: 100%;
-    background: rgb(90, 131, 189);
+    background: rgb(113, 149, 199);
     font-family: 'futura';
     color: white;
+    line-height: 2vh;
 }
 
-.navText {
-    font-size: 1em;
+.mainNavText {
+    font-size: 1.5em;
     margin-left: 2%;
 }
 
 footer {
     margin-top: auto;
     width: 100%;
+    line-height: 2vh;
     display: inline-block;
     text-align: center;
-    background: rgb(170, 189, 205);
+    background: rgb(168, 191, 224);
     font-family: 'futura';
-    font-size: 0.8em;
     color: white;
 }
 
 .footerText {
-    font-size: 1em;
+    font-size: 0.8em;
+    margin-top: auto;
     margin-bottom: auto;
+}
+
+#luckyLink {
+    margin: auto;
+    color: rgb(179, 208, 201);
+    text-decoration: none;
+    text-align: right;
+    margin-right: 2%;
+    padding-left: 50vw;
 }
