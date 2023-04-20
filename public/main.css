@@ -37,6 +37,17 @@ nav {
     margin-left: 2%;
 }
 
+.links {
+    color: rgb(192, 218, 205);
+    text-decoration: none;
+    padding-left: 3em;
+    font-size: 0.8em;
+}
+
+.links:hover {
+    color: white;
+}
+
 footer {
     margin-top: auto;
     width: 100%;
@@ -51,16 +62,4 @@ footer {
 .footbarText {
     line-height: 1.2vh;
     font-size: 1em;
-}
-
-
-.links {
-    color: rgb(192, 218, 205);
-    text-decoration: none;
-    padding-left: 3em;
-    font-size: 0.8em;
-}
-
-.links:hover {
-    color: white;
 }
