@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const axios = require('axios');
-const key = require('./.env')
+const key = require('./.env');
+const catchAsync = require('./utils/catchAsync');
+const { error } = require('console');
+
 
 //parsing data in order to populate the body
 app.use(express.urlencoded({ extended: true }))
 //serving static files
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, 'public')))
 //views directory - for ejs files
 app.set('views', path.join(__dirname, '/views'))
 app.set('view engine', 'ejs')
@@ -18,7 +21,7 @@ app.get('/', (req, res) => {
 })
 
 //main planet searching route
-app.get('/planets', async (req, res) => {
+app.get('/planets', catchAsync(async (req, res) => {
     const { planetName } = req.query
     const options = {
         method: 'GET',
@@ -33,14 +36,18 @@ app.get('/planets', async (req, res) => {
     let src = await axios.request(options).then(function (response) {
         return response.data[0]
     })
-    if (!planetName) {
+    if (error) {
         res.render('notfound')
     }
 
     res.render('planets', { planetName, src })
+}))
+
+app.all('*', (req, res, next) => {
+    res.render('notfound')
 })
 
-app.listen(8080, () => {
-    console.log('listening on port 8080')
+app.listen(3000, () => {
+    console.log('listening on port 3000')
 })
 

@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     height: 100vh;
     margin: 0;
-    background: rgb(239, 243, 249);
+    background: rgb(245, 247, 250);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,18 +24,16 @@ body {
 }
 
 nav {
-    display: inline-flex;
-    text-align: left;
-    margin-top: 0;
+    display: inline;
     width: 100%;
     background: rgb(113, 149, 199);
     font-family: 'futura';
     color: white;
-    line-height: 2vh;
+    line-height: 1vh;
 }
 
 .mainNavText {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-left: 2%;
 }
 
@@ -50,17 +48,19 @@ footer {
     color: white;
 }
 
-.footerText {
-    font-size: 0.8em;
-    margin-top: auto;
-    margin-bottom: auto;
+.footbarText {
+    line-height: 1.2vh;
+    font-size: 1em;
 }
 
-#luckyLink {
-    margin: auto;
-    color: rgb(179, 208, 201);
+
+.links {
+    color: rgb(192, 218, 205);
     text-decoration: none;
-    text-align: right;
-    margin-right: 2%;
-    padding-left: 50vw;
+    padding-left: 3em;
+    font-size: 0.8em;
+}
+
+.links:hover {
+    color: white;
 }
