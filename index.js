@@ -43,7 +43,7 @@ app.get('/planets', catchAsync(async (req, res) => {
     res.render('planets', { planetName, src })
 }))
 
-//random route 'i'm feeling lucky'
+// random route 'i'm feeling lucky'
 // app.get('/randomplanet', catchAsync(async (req, res) => {
 //     // const {planetName} = ??
 //     const options = {

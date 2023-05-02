@@ -1,5 +1,8 @@
 .app {
+    text-align: center;
     font-family: 'Bebas Neue';
-    color: rgb(32, 154, 127);
-    font-size: 3em;
+    width: 18em;
+    height: 18em;
+    color: rgb(66, 40, 85);
+    font-size: clamp(0.5rem, 1em + 0.5vw, 4rem);
 }

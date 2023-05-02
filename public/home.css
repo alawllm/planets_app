@@ -1,36 +1,57 @@
 .circle {
-    transition: all .2s ease-in-out;
-    /* font-size: clamp(1rem, 1em + 1vw, 5rem); */
-    font-family: 'Bebas Neue';
-    width: 18em;
-    height: 18em;
-    margin: 3em;
-    background: rgb(51, 106, 118);
-    color: rgb(255, 255, 255);
-    border-radius: 50%;
+    margin: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.6em;
+    transition: all .2s ease-in-out;
+    width: 25em;
+    height: 25em;
+    padding: 3em;
+    background: rgb(41, 87, 97);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: clamp(0.5rem, 1em + 0.5vw, 5rem);
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 200;
 }
 
 .circle:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .inputAndButton {
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .mainButton {
-    margin: 0.5rem;
-    border-radius: 20%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    margin: 0.9rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    color: #2e283b;
+    border: 1px solid #544e4e;
+    background-color: #f2f4f4;
 }
 
 #inp {
-    margin: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 6 800;
+    font-size: 0.7em;
+    text-align: center;
+    margin: 1em;
+    padding: 8px;
+    border-radius: 10px;
+    margin: 5px auto;
+    border: 1px solid #544e4e;
+    background-color: #dcf0f0;
+    color: #c9c2c2;
+    outline: none;
 }

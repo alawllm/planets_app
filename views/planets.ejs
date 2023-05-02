@@ -5,45 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="/planets.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300&family=Rubik+Bubbles&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/planets.css">
     <title>Planets</title>
 </head>
 
 <body>
-    <nav>
-        <p class="navText">planet searching app <a class="links" href="/">back to the main page</a></p>
+    <nav class="navbar">
+        <p class="mainNavText">planet searching app <a class="links" href="/">back to the main page</a></p>
     </nav>
     <main>
         <div class="app">
-            <h1>
-                Planet: <%= planetName %>
-            </h1>
-            <h2>here is your data</h2>
-            <div>
-                <h3>
-                    mass : <%= src.mass %>
-                </h3>
-                <h3>
-                    radius : <%= src.radius %>
-                </h3>
-                <h3>
-                    temperature : <%= src.temperature %>
-                </h3>
-                <h3>
-                    min. distance (light year) : <%= src.distance_light_year %>
-                </h3>
+            <div class="container">
+                <h1>
+                    Planet: <%= planetName %>
+                </h1>
+                <h2>here is your data</h2>
+                <div>
+                    <h3>
+                        mass : <%= src.mass %>
+                    </h3>
+                    <h3>
+                        radius : <%= src.radius %>
+                    </h3>
+                    <h3>
+                        temperature : <%= src.temperature %>
+                    </h3>
+                    <h3>
+                        min. distance (light year) : <%= src.distance_light_year %>
+                    </h3>
+                </div>
             </div>
         </div>
 
     </main>
     <footer>
-        <p>
         <p class="footbarText">built in 2023 by ala willam <a class="links" href="https://github.com/alawllm">GitHub</a>
-        </p>
         </p>
     </footer>
 </body>

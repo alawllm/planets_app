@@ -1,13 +1,11 @@
 .app {
-    border-radius: 20%;
-    min-width: 300px;
-    min-height: 350px;
-    width: 50vh;
-    height: 50vh;
-    /* color etc */
-    background: rgb(35, 122, 146);
-    color: rgb(255, 255, 255);
-    transition: all .2s ease-in-out;
-    /* font-size: clamp(1rem, 1em + 1vw, 5rem); */
     font-family: 'Bebas Neue';
+    width: 18em;
+    height: 18em;
+    color: rgb(66, 40, 85);
+    text-align: center;
+}
+
+.container {
+    font-size: clamp(0.5rem, 1em + 0.5vw, 4rem);
 }

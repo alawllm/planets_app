@@ -1,44 +1,42 @@
 body {
-    box-sizing: border-box;
-    overflow: hidden;
     height: 100vh;
     margin: 0;
     background: rgb(245, 247, 250);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+
 .app {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    padding: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-nav {
-    display: inline;
+.navbar {
     width: 100%;
     background: rgb(113, 149, 199);
     font-family: 'futura';
     color: white;
     line-height: 1vh;
+    text-align: left;
 }
 
 .mainNavText {
-    font-size: 1.2em;
-    margin-left: 2%;
+    padding-left: 3rem;
 }
 
 .links {
-    color: rgb(192, 218, 205);
+    color: rgb(54, 47, 197);
     text-decoration: none;
     padding-left: 3em;
     font-size: 0.8em;
