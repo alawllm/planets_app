@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: rgb(245, 247, 250);
+    background: rgb(238, 244, 246);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +29,7 @@ body {
     color: white;
     line-height: 1vh;
     text-align: left;
+    font-size: 1em;
 }
 
 .mainNavText {
@@ -36,10 +37,10 @@ body {
 }
 
 .links {
-    color: rgb(54, 47, 197);
+    color: rgb(86, 82, 164);
     text-decoration: none;
     padding-left: 3em;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .links:hover {

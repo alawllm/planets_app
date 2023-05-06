@@ -44,26 +44,27 @@ app.get('/planets', catchAsync(async (req, res) => {
 }))
 
 // random route 'i'm feeling lucky'
-// app.get('/randomplanet', catchAsync(async (req, res) => {
-//     // const {planetName} = ??
-//     const options = {
-//         method: 'GET',
-//         url: 'https://planets-by-api-ninjas.p.rapidapi.com/v1/planets',
-//         params: { name: planetName },
-//         headers: {
-//             'X-RapidAPI-Key': key,
-//             'X-RapidAPI-Host': 'planets-by-api-ninjas.p.rapidapi.com'
-//         }
-//     }
-//     let src = await axios.request(options).then(function (response) {
-//         return response.data[0]
-//     })
-//     if (error) {
-//         res.render('notfound')
-//     }
-
-//     res.render('planets', { planetName, src })
-// }))
+app.get('/randomplanet', catchAsync(async (req, res) => {
+    const planetMass = Math.random() * .1
+    const planetOffset = Math.floor(Math.random() * 100)
+    const options = {
+        method: 'GET',
+        url: 'https://planets-by-api-ninjas.p.rapidapi.com/v1/planets',
+        params: { min_mass: planetMass, offset: planetOffset },
+        headers: {
+            'X-RapidAPI-Key': key,
+            'X-RapidAPI-Host': 'planets-by-api-ninjas.p.rapidapi.com'
+        }
+    }
+    let src = await axios.request(options).then(function (response) {
+        return response.data[0]
+    })
+    if (!src) {
+        res.render('notfound')
+    }
+    console.log(src)
+    res.render('random', { src })
+}))
 
 app.all('*', (req, res, next) => {
     res.render('notfound')

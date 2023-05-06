@@ -1,11 +1,21 @@
 .app {
-    font-family: 'Bebas Neue';
-    width: 18em;
-    height: 18em;
-    color: rgb(66, 40, 85);
+    width: 45em;
+    height: 25em;
+    color: rgb(241, 238, 244);
     text-align: center;
 }
 
 .container {
-    font-size: clamp(0.5rem, 1em + 0.5vw, 4rem);
+    font-family: 'Futura';
+    background: rgb(55, 94, 101);
+    border-radius: 20px;
+    font-size: clamp(0.8rem, 1em + 0.3vw, 4rem);
+    padding: 1.5em;
+    display: grid
+}
+
+#headerPlanetName {
+    font-family: 'Futura';
+    font-size: 2em;
+    margin-bottom: 1.2em;
 }
