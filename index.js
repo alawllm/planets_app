@@ -63,7 +63,7 @@ app.get('/randomplanet', catchAsync(async (req, res) => {
         res.render('notfound')
     }
     console.log(src)
-    res.render('random', { src })
+    res.render('planets', { src })
 }))
 
 app.all('*', (req, res, next) => {

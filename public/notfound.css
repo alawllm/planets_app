@@ -1,8 +1,14 @@
+body {
+    background-image: url('https://apod.nasa.gov/apod/image/2305/NGC5128_Lorenzi_3000.jpg');
+}
+
 .app {
     text-align: center;
-    font-family: 'Futura';
-    width: 18em;
-    height: 18em;
-    color: rgb(66, 40, 85);
-    font-size: clamp(0.5rem, 1em + 0.5vw, 4rem);
+    font-family: 'Oswald';
+    font-weight: 100;
+    width: 100%;
+    height: 80%;
+    font-size: 40%;
+    color: rgb(241, 238, 244);
+    font-size: clamp(1rem, 4em, 6rem);
 }

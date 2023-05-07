@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     margin: 0;
-    background: rgb(238, 244, 246);
+    background: rgb(228, 236, 239);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,12 +24,12 @@ body {
 
 .navbar {
     width: 100%;
-    background: rgb(113, 149, 199);
+    background: rgb(85, 107, 159);
     font-family: 'futura';
     color: white;
-    line-height: 1vh;
+    line-height: 2vh;
     text-align: left;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 .mainNavText {
@@ -37,7 +37,7 @@ body {
 }
 
 .links {
-    color: rgb(86, 82, 164);
+    color: rgb(187, 196, 218);
     text-decoration: none;
     padding-left: 3em;
     font-size: 1em;
@@ -50,10 +50,10 @@ body {
 footer {
     margin-top: auto;
     width: 100%;
-    line-height: 2vh;
+    line-height: 1.5vh;
     display: inline-block;
     text-align: center;
-    background: rgb(168, 191, 224);
+    background: rgb(116, 139, 171);
     font-family: 'futura';
     color: white;
 }

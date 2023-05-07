@@ -25,25 +25,38 @@
         <div class="app">
             <div class="container">
                 <h1 id="headerPlanetName">
-                    <%= planetName.toUpperCase() %>
+                    <%= src.name.toUpperCase() %>
                 </h1>
                 <div>
-                    <h3>
-                        mass: <%= src.mass %>
-                    </h3>
-                    <h3>
-                        radius: <%= src.radius %>
-                    </h3>
-                    <h3>
-                        period: <%= src.period %> days
-                    </h3>
-                    <h3>
-                        temperature: <%= src.temperature %>
-                    </h3>
-                    <h3>
-                        min. distance from earth: <%= parseFloat(src.distance_light_year*8766).toFixed(2)%>
-                            light hours
-                    </h3>
+
+                    <% if (src.mass) { %>
+                        <h3>
+                            mass: <%= src.mass %> jupiters mass
+                        </h3>
+                        <% } %>
+                            <% if (src.radius) {%>
+                                <h3>
+                                    radius: <%= src.radius %> jupiters
+                                </h3>
+                                <% } %>
+                                    <% if (src.period) {%>
+                                        <h3>
+                                            period: <%= src.period %> days
+                                        </h3>
+                                        <% } %>
+                                            <% if (src.temperature) {%>
+                                                <h3>
+                                                    temperature: <%= src.temperature %> kelvin
+
+                                                </h3>
+                                                <% } %>
+                                                    <% if (src.distance_light_year) { %>
+                                                        <h3>
+                                                            min. distance from earth:
+                                                            <%=parseFloat(src.distance_light_year*8766).toFixed(2)%>
+                                                                light hours
+                                                        </h3>
+                                                        <% } %>
                 </div>
             </div>
         </div>
