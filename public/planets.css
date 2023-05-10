@@ -1,21 +1,26 @@
 .app {
-    width: 60%;
-    height: 50%;
+    width: 75%;
+    height: 40%;
     color: rgb(241, 238, 244);
     text-align: left;
 }
 
 .container {
     font-family: 'Futura';
-    font-weight: 400;
-    background: rgb(42, 53, 84);
+    background: rgb(38, 56, 107);
     border-radius: 20px;
-    font-size: clamp(0.8rem, 1.1em, 4rem);
-    padding: 3em;
+    padding: 1.5em;
+}
+
+#contentPlanetData {
+    font-size: clamp(0.8rem, 1.2em, 4rem);
+    font-weight: 100;
+    color: rgb(199, 199, 223);
 }
 
 #headerPlanetName {
-    font-family: 'Futura';
-    font-size: clamp(1rem, 2em, 6rem);
-    margin-bottom: 1.2em;
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5em, 6rem);
+    margin-bottom: 1.5em;
+
 }
