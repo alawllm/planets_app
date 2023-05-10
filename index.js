@@ -4,9 +4,9 @@ const path = require('path')
 const axios = require('axios');
 const key = require('./.env');
 const catchAsync = require('./utils/catchAsync');
-const { error } = require('console');
+const serverless = require('serverless-http')
 
-
+app.use(bodyParser)
 //parsing data in order to populate the body
 app.use(express.urlencoded({ extended: true }))
 //serving static files
@@ -74,3 +74,7 @@ app.listen(3000, () => {
     console.log('listening on port 3000')
 })
 
+app.use('/.netlify/functions/server', router);
+
+module.exports = app;
+module.exports.handler = serverless(app)
