@@ -4,10 +4,11 @@ const app = express();
 const path = require('path')
 const axios = require('axios');
 const key = require('./.env');
-const catchAsync = require('./utils/catchAsync');
+const catchAsync = require('../utils/catchAsync');
 const serverless = require('serverless-http');
 const bodyParser = require('body-parser');
 
+const router = express.Router();
 app.use(bodyParser)
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
@@ -71,7 +72,7 @@ app.listen(4000, () => {
     console.log('listening on port 3000')
 })
 
-app.use('/.netlify/functions/server', router);
+app.use('/.netlify/functions/index', router);
 
 module.exports = app;
 module.exports.handler = serverless(app)
