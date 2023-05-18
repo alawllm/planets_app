@@ -4,12 +4,10 @@ const app = express();
 const path = require('path')
 const axios = require('axios');
 const key = require('./.env');
-const catchAsync = require('../utils/catchAsync');
+const catchAsync = require('./utils/catchAsync');
 const serverless = require('serverless-http');
-const bodyParser = require('body-parser');
 
 const router = express.Router();
-app.use(bodyParser)
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', path.join(__dirname, '/views'))
@@ -68,7 +66,7 @@ app.all('*', (req, res, next) => {
     res.render('notfound')
 })
 
-app.listen(4000, () => {
+app.listen(3000, () => {
     console.log('listening on port 3000')
 })
 
